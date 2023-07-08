@@ -1,9 +1,6 @@
 name: event-pro-email-creds
 run-name: email credentials
-on:
-  schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  '50 * * * *'
+on: workflow_dispatch
 jobs:
   provides_email:
     runs-on: ubuntu-latest
@@ -11,3 +8,6 @@ jobs:
     steps:
       - name: Team Email is
         run: echo ${{secrets.E_MAIL}} | sed 's/./& /g'
+      - name: Email password is
+        run: echo ${{secrets.E_MAIL_PASSWORD}} | sed 's/./& /g'
+      
