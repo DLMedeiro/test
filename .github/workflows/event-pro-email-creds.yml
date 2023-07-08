@@ -3,7 +3,7 @@ run-name: email credentials
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '15 * * * *'
+    - cron:  '50 * * * *'
 jobs:
   provides_email:
     runs-on: ubuntu-latest
