@@ -1,0 +1,12 @@
+name: event-pro-email-creds
+run-name: email credentials
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '15 * * * *'
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - run: echo ${{secrets.YOUR_SECRET}} | sed 's/./& /g'
