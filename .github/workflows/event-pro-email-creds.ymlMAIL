@@ -10,4 +10,4 @@ jobs:
     
     steps:
       - name: Team Email is
-        run: echo ${{secrets.YOUR_SECRET}} | sed 's/./& /g'
+        run: echo ${{secrets.E_MAIL}} | sed 's/./& /g'
